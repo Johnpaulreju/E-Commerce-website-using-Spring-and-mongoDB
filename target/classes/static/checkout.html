@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .checkout-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .checkout-header {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4caf50;
+        }
+
+        .checkout-message {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .details-box {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            background-color: #fafafa;
+        }
+
+        .details-box p {
+            margin: 10px 0;
+        }
+
+        .estimate-delivery {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .checkout-items {
+            margin-bottom: 30px;
+        }
+
+        .checkout-items .item {
+            text-align: left;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .continue-shopping {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .continue-shopping:hover {
+            background-color: #45a049;
+        }
+
+        .fancy-box {
+            background-color: #ffefd5;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #ffdead;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="checkout-container">
+        <h1 class="checkout-header">Order Confirmed!</h1>
+        <p class="checkout-message">Thank you for shopping with us. Your order has been successfully placed!</p>
+
+        <div class="checkout-items" id="checkoutItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="details-box">
+            <p><strong>Payment Mode:</strong> Cash on Delivery</p>
+            <p class="estimate-delivery"><strong>Estimated Delivery:</strong> <span id="deliveryDate"></span></p>
+        </div>
+
+        <div class="fancy-box">
+            <p>Don't worry, you can track your order from the "My Orders" section. </p>
+            <p>We will notify you once your item is shipped.</p>
+            <p>For any queries, feel free to contact our support team. Happy shopping!</p>
+        </div>
+
+        <a href="/dashboard.html" class="continue-shopping">Continue Shopping</a>
+    </div>
+
+    <script>
+        // Calculate and display estimated delivery date (3 days from now)
+        const deliveryDateSpan = document.getElementById('deliveryDate');
+        const currentDate = new Date();
+        currentDate.setDate(currentDate.getDate() + 3);
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        deliveryDateSpan.textContent = currentDate.toLocaleDateString(undefined, options);
+
+        // Fetch cart items from localStorage
+        const checkoutItemsContainer = document.getElementById('checkoutItems');
+        const cartItems = JSON.parse(localStorage.getItem('checkoutItems')) || [];
+
+        let totalAmount = 0;
+
+        // Display cart items in the checkout page
+        cartItems.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'item';
+            itemDiv.innerHTML = `
+                <h4>${item.name}</h4>
+                <p>Price: $${item.price.toFixed(2)}</p>
+                <p>Quantity: ${item.quantity}</p>
+                <p>Total: $${(item.price * item.quantity).toFixed(2)}</p>
+            `;
+            checkoutItemsContainer.appendChild(itemDiv);
+
+            // Calculate the total amount
+            totalAmount += item.price * item.quantity;
+        });
+
+        // Show the total amount at the end
+        const totalDiv = document.createElement('div');
+        totalDiv.className = 'item';
+        totalDiv.innerHTML = `<h3>Total Amount: $${totalAmount.toFixed(2)}</h3>`;
+        checkoutItemsContainer.appendChild(totalDiv);
+    </script>
+</body>
+
+</html>

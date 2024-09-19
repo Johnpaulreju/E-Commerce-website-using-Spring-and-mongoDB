@@ -1,0 +1,16 @@
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/controller/UserController.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/model/CartItem.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/controller/CartController.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/model/PurchasedItem.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/service/CartService.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/controller/ProductController.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/service/ProductService.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/model/User.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/repository/CartRepository.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/repository/UserRepository.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/repository/ProductRepository.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/repository/PurchasedItemRepository.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/EcommerceApplication.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/service/UserService.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/model/Product.java
+/Users/johnpaulreju/recipe/ecommerce/src/main/java/com/example/ecommerce/model/LoginRequest.java

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="topbar">
+            <h1 class="brand">Jstores</h1>
+            <div class="profile-dropdown">
+                <button class="profile-button">
+                    <!-- Profile avatar -->
+                    <img src="avlogo.png" alt="Avatar" class="avatar">
+                    <!-- Profile name (will be filled dynamically) -->
+                    <span id="profileName">Welcome, <strong>Loading...</strong></span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/cart.html">Cart</a>
+                    <a href="/checkout.html">Checkout</a>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main>
+        <div id="product-list">
+            <!-- Products will be loaded dynamically here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Dashboard</p>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+com/example/ecommerce/model/CartItem.class
+com/example/ecommerce/controller/UserController.class
+com/example/ecommerce/repository/CartRepository.class
+com/example/ecommerce/service/CartService.class
+com/example/ecommerce/EcommerceApplication.class
+com/example/ecommerce/repository/ProductRepository.class
+com/example/ecommerce/model/PurchasedItem.class
+com/example/ecommerce/service/UserService.class
+com/example/ecommerce/model/Product.class
+com/example/ecommerce/model/LoginRequest.class
+com/example/ecommerce/model/User.class
+com/example/ecommerce/repository/UserRepository.class
+com/example/ecommerce/controller/ProductController.class
+com/example/ecommerce/repository/PurchasedItemRepository.class
+com/example/ecommerce/controller/CartController.class
+com/example/ecommerce/service/ProductService.class
